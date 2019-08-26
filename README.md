@@ -8,7 +8,7 @@ Item0:
  - count: 1 <- for the lot
 
 have fun with the plugin and macke a issue for Proplems on GitHub
-Plugin mate by TheNote
+Plugin made by TheNote
 
 # My Discord:
 <div align="center">
