@@ -11,14 +11,7 @@ use pocketmine\utils\Config;
 
 class Main extends PluginBase implements Listener {
 
-    public function onEnable()
-    {
-          $this->saveDefaultConfig();
-          $this->getLogger()->info("§6Starter§bKit§f by [§4The§fNote] §aenabled!");
-                  $this->getServer()->getPluginManager()->registerEvents($this ,$this);
-        }
-    
-public function onJoin(PlayerJoinEvent $event) {
+ public function onJoin(PlayerJoinEvent $event) {
             $player = $event->getPlayer();
             $this->cfg = new Config($this->getDataFolder()."config.yml", Config::YAML, array());
             $i = $this->cfg->getAll();
