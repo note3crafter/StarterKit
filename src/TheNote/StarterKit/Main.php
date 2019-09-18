@@ -11,6 +11,12 @@ use pocketmine\utils\Config;
 
 class Main extends PluginBase implements Listener {
 
+	public function onEnable()
+	{
+                  $this->saveResource("config.yml");
+                  $this->getServer()->getPluginManager()->registerEvents($this ,$this);
+        }
+
  public function onJoin(PlayerJoinEvent $event) {
             $player = $event->getPlayer();
             $this->cfg = new Config($this->getDataFolder()."config.yml", Config::YAML, array());
