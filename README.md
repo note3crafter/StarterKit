@@ -10,5 +10,5 @@ Item0:
 
 have fun with the plugin and make a issue for Proplems on GitHub
 Plugin mate by TheNote
-Discord : [![Discord](https://img.shields.io/discord/427472879072968714.svg?style=flat-square&label=discord&colorB=7289da)](https://discord.gg/XwXKuvy) |<br>
+[![Discord](https://img.shields.io/discord/427472879072968714.svg?style=flat-square&label=discord&colorB=7289da)](https://discord.gg/XwXKuvy) |<br>
 
