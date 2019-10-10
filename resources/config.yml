@@ -1,37 +1,6 @@
 ---
-Slot1:
-  id: 272
-  damage: 0
-  count: 1
-Slot2:
-  id: 275
-  damage: 0
-  count: 1
-Slot3:
-  id: 274
-  damage: 0
-  count: 1
-Slot4:
-  id: 273
-  damage: 0
-  count: 1
-Slot5:
-  id: 320
-  damage: 0
-  count: 32
-Slot6:
-  id: 264
-  damage: 0
-  count: 8
-Slot7:
-  id: 0
-  damage: 0
-  count: 0
-Slot8:
-  id: 0
-  damage: 0
-  count: 0
-Slot9:
-  id: 0
-  damage: 0
-  count: 0
+Slots:
+  - slot: 1
+    id: 272
+    damage: 0
+    count: 1
