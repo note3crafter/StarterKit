@@ -7,12 +7,12 @@ In the Config you can easily change the items yourself
 Welcome to StarterKit 2.0.0 by TheNote
 You Can now setup more Features!
 
-  - slot: <- Set the Slot wo are the Item Place (0-35)
-    id: <- set the ItemID of the Item
-    damage: <- set the damage of the Item
-    count: <- set the amount of the Item
-    name: <- set a Customname for the Item
-    lore: <- set the Lore of the Item
+ * - slot: <- Set the Slot wo are the Item Place (0-35)
+ *   id: <- set the ItemID of the Item
+ *   damage: <- set the damage of the Item
+ *   count: <- set the amount of the Item
+ *   name: <- set a Customname for the Item
+ *   lore: <- set the Lore of the Item
     
 # Other
 
