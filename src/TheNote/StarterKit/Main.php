@@ -2,36 +2,42 @@
 
 namespace TheNote\StarterKit;
 
+use pocketmine\item\ItemFactory;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\player\PlayerJoinEvent;
 use pocketmine\event\Listener;
-use pocketmine\Player;
 use pocketmine\item\Item;
 use pocketmine\utils\Config;
 
-class Main extends PluginBase implements Listener {
+class Main extends PluginBase implements Listener
+{
 
-	public function onEnable()
-	{
-                  $this->saveResource("config.yml");
-                  $this->getServer()->getPluginManager()->registerEvents($this ,$this);
-        }
+    public function onEnable()
+    {
+        $this->saveResource("config.yml");
+        $this->getServer()->getPluginManager()->registerEvents($this, $this);
+        $cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML);
+        $this->items = (array)$cfg->get("Slots");
+    }
 
- public function onJoin(PlayerJoinEvent $event) {
-            $player = $event->getPlayer();
-            $this->cfg = new Config($this->getDataFolder()."config.yml", Config::YAML, array());
-            $i = $this->cfg->getAll();
-            if(!$player->hasPlayedBefore()) {
-                $player->getInventory()->setItem(0, Item::get($i["Slot1"]["id"], $i["Slot1"]["damage"], $i["Slot1"]["count"]));
-                $player->getInventory()->setItem(1, Item::get($i["Slot2"]["id"], $i["Slot2"]["damage"], $i["Slot2"]["count"]));
-                $player->getInventory()->setItem(2, Item::get($i["Slot3"]["id"], $i["Slot3"]["damage"], $i["Slot3"]["count"]));
-                $player->getInventory()->setItem(3, Item::get($i["Slot4"]["id"], $i["Slot4"]["damage"], $i["Slot4"]["count"]));
-                $player->getInventory()->setItem(4, Item::get($i["Slot5"]["id"], $i["Slot5"]["damage"], $i["Slot5"]["count"]));
-                $player->getInventory()->setItem(5, Item::get($i["Slot6"]["id"], $i["Slot6"]["damage"], $i["Slot6"]["count"]));
-                $player->getInventory()->setItem(6, Item::get($i["Slot7"]["id"], $i["Slot7"]["damage"], $i["Slot7"]["count"]));
-                $player->getInventory()->setItem(7, Item::get($i["Slot8"]["id"], $i["Slot8"]["damage"], $i["Slot8"]["count"]));
-                $player->getInventory()->setItem(8, Item::get($i["Slot9"]["id"], $i["Slot9"]["damage"], $i["Slot9"]["count"]));
+    public function onJoin(PlayerJoinEvent $event)
+    {
+        $player = $event->getPlayer();
+        $ainv = $player->getArmorInventory();
 
+        $this->cfg = new Config($this->getDataFolder() . "config.yml", Config::YAML, array());
+        if (!$player->hasPlayedBefore()) {
+            if ($this->cfg->get("Inventory" === true)) {
+                foreach ($this->items as $item) {
+                    $player->getInventory()->setItem($item["slot"], ItemFactory::get($item["slot"]["Slot1"]["id"], $item["slot"]["Slot1"]["damage"], $item["slot"]["Slot1"]["count"])->setCustomName($item["slot"]["Slot1"][$this->cfg->getNestet("name")]), $item["slot"]->setLore(["Slot1"][$this->cfg->getNestet("lore")]));
+                }
+            }
+            if ($this->items->get("Amor" === true)) {
+                $ainv->setHelmet(Item::get($this->items["helm"]["id"])->setCustomName($this->items["helm"][$this->cfg->getNestet("name")])->setLore($this->items["helm"][$this->cfg->getNestet("lore")]));
+                $ainv->setChestplate(Item::get($this->items["chest"]["id"])->setCustomName($this->items["chest"][$this->cfg->getNestet("name")])->setLore($this->items["chest"][$this->cfg->getNestet("lore")]));
+                $ainv->setLeggings(Item::get($this->items["leggins"]["id"])->setCustomName($this->items["leggins"][$this->cfg->getNestet("name")])->setLore($this->items["leggins"][$this->cfg->getNestet("lore")]));
+                $ainv->setBoots(Item::get($this->items["boots"]["id"])->setCustomName($this->items["boots"][$this->cfg->getNestet("name")])->setLore($this->items["boots"][$this->cfg->getNestet("lore")]));
             }
         }
+    }
 }
