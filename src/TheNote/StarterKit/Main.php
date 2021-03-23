@@ -32,7 +32,7 @@ class Main extends PluginBase implements Listener
                     $player->getInventory()->setItem($item["slot"], ItemFactory::get($item["slot"]["Slot1"]["id"], $item["slot"]["Slot1"]["damage"], $item["slot"]["Slot1"]["count"])->setCustomName($item["slot"]["Slot1"][$this->cfg->getNestet("name")]), $item["slot"]->setLore(["Slot1"][$this->cfg->getNestet("lore")]));
                 }
             }
-            if ($this->items->get("Amor" === true)) {
+            if ($this->cfg->get("Amor" === true)) {
                 $ainv->setHelmet(Item::get($this->items["helm"]["id"])->setCustomName($this->items["helm"][$this->cfg->getNestet("name")])->setLore($this->items["helm"][$this->cfg->getNestet("lore")]));
                 $ainv->setChestplate(Item::get($this->items["chest"]["id"])->setCustomName($this->items["chest"][$this->cfg->getNestet("name")])->setLore($this->items["chest"][$this->cfg->getNestet("lore")]));
                 $ainv->setLeggings(Item::get($this->items["leggins"]["id"])->setCustomName($this->items["leggins"][$this->cfg->getNestet("name")])->setLore($this->items["leggins"][$this->cfg->getNestet("lore")]));
