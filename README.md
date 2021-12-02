@@ -4,7 +4,8 @@ In the Config you can easily change the items yourself
 
 # Config
 
-Welcome to StarterKit 2.0.1 by TheNote
+Welcome to StarterKit 3.0.0 by TheNote
+
 You Can now setup more Features!
 
  * - slot: <- Set the Slot wo are the Item Place (0-35)
