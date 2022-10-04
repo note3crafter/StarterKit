@@ -30,7 +30,6 @@ Inventory: true
 
  # - slot: <- Set the Slot wo are the Item Place (0-35)
  #   id: <- set the ItemID of the Item
- #   damage: <- set the damage of the Item
  #   count: <- set the amount of the Item
  #   name: <- set a Customname for the Item
  #   lore: <- set the Lore of the Item
@@ -38,42 +37,36 @@ Inventory: true
 Slots:
   - slot: 0
     id: 272
-    damage: 0
     count: 1
     name: StarterSword
     lore: StarterKit by TheNote
 
   - slot: 1
     id: 275
-    damage: 0
     count: 1
     name: StarterAxe
     lore: StarterKit by TheNote
 
   - slot: 2
     id: 274
-    damage: 0
     count: 1
     name: StarterPickaxe
     lore: StarterKit by TheNote
 
   - slot: 3
     id: 273
-    damage: 0
     count: 1
     name: StarterShovel
     lore: StarterKit by TheNote
 
   - slot: 4
     id: 320
-    damage: 0
     count: 32
     name: StarterPorkshop
     lore: StarterKit by TheNote
 
   - slot: 5
     id: 264
-    damage: 0
     count: 8
     name: StarterDiamond
     lore: StarterKit by TheNote
