@@ -1,0 +1,7 @@
+branches:
+- pm5
+projects:
+  StarterKit:
+    path: ""
+    icon: "icon.png"
+...
