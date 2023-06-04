@@ -1,6 +1,5 @@
---- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/note3crafter/StarterKit
 branches:
-- master
+- pm5
 projects:
   StarterKit:
     path: ""
