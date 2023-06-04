@@ -4,7 +4,7 @@ In the Config you can easily change the items yourself
 
 # Config
 
-Welcome to StarterKit 4.0.0 by TheNote
+Welcome to StarterKit 4.0.1 by TheNote
 
 You Can now setup more Features!
 
