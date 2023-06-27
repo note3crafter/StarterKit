@@ -8,8 +8,8 @@ Welcome to StarterKit 4.0.1 by TheNote
 
 You Can now setup more Features!
 
- * - slot: <- Set the Slot wo are the Item Place (0-35)
- *   name: <- set the ItemName here
+ *   slot: <- Set the Slot wo are the Item Place (0-35)
+ *   item: <- set the ItemName here
  *   count: <- set the amount of the Item
  *   name: <- set a Customname for the Item
  *   lore: <- set the Lore of the Item
